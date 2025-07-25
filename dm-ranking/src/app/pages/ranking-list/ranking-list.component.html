@@ -1,0 +1,18 @@
+<div>
+  Diego Martins Ranking List - Ordene alista das músicas da Diego de acordo com as suas favoritas
+</div>
+
+
+<div class="flex justify-content-center col-12">
+  <div class="list-wrapper col-1">
+      <div>
+        @for (item of songsList; track item.description) {
+          <span class="list-num">{{ $index + 1 }}º</span>
+        }
+      </div>
+  </div>
+  <div class="col-6">
+      <!-- <info-order-list [items]="indicators" (emitNewOrder)="enableSaveBtn($event)"></info-order-list> -->
+      <app-order-list [items]="songsList"></app-order-list>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.color{
+  color: white;
+}
+
+.list{
+  display: flex;
+  padding: 0rem;
+}
+
+.jst-left{
+  justify-content: left;
+}
+
+::ng-deep {
+  .p-orderlist {
+      .p-orderlist-controls {
+          display: none !important;
+
+      }
+
+      .p-orderlist-list {
+          border: none !important;
+          background-color: var(--s-bg) !important;
+
+          .p-orderlist-item {
+              padding: 0rem !important;
+              background-color: var(--s-bg) !important;
+          }
+      }
+  }
+
+  li.p-element.cdk-drag.p-orderlist-item {
+      border: 0.063rem solid var(--n-20) !important;
+      margin-bottom: 1rem;
+  }
+
+  .item-drag-btn {
+      width: 3rem;
+      height: auto;
+      background-color: var(--p-700);
+      @include flex-center;
+  }
+
+  .item-text {
+      @include flex-center;
+      font-size: var(--normal-size);
+  }
+
+  .dash-logo {
+      border-radius: 100%;
+      box-shadow: 0px 0px 4px 0px #00000040;
+      padding: 0.5rem;
+      min-width: 2.5rem;
+      min-height: 2.5rem;
+  }
+
+  .cdk-drag-preview {
+      padding: 0rem !important;
+  }
+
+  .cdk-drag-placeholder {
+      padding: 0rem !important;
+  }
+
+  .img-logo {
+      position: relative;
+      top: 0.2rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin: 0 auto;
+      pointer-events: none;
+  }
+
+
+}
+
+
+// .list-wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 3.6rem;
+//   margin-top: 1.8rem;
+//   margin-right: -1.5rem;
+// }
+
+// .list-num {
+//   display: inline-flex;
+// }

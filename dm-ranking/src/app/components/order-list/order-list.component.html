@@ -1,0 +1,15 @@
+<p-orderList [value]="items" [dragdrop]="true" (onReorder)="emitItens()">
+  <ng-template let-item  pTemplate="item" let-index="index">
+      <div class="col-12 list">
+          <div class="item-drag-btn"><i class="fa-solid fa-bars color"></i></div>
+          <div class="flex align-items-center col-8">
+              <div class="dash-logo">
+                  <img class="img-logo" alt="logo"
+                    src="assets/icon/{{item.icon}}.svg" />
+              </div>
+              <span class="item-text col-10 jst-left">{{item.description}}</span>
+          </div>
+          <span class="item-text col-3">{{item.classification}}</span>
+      </div>
+  </ng-template>
+</p-orderList>
